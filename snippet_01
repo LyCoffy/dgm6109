@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippet 01</title>
+</head>
+<body> 
+<!-- From here up it was provided by VS html5 template -->
+
+  <!-- An in-text link -->
+  <a href="https://link.com">An in-text link</a>
+
+  <!-- An image and caption:
+  I ask google "how to write and image with captions in html5" and 
+  the google ai answer with the step by step on how to do this next section -->
+  <figure>
+    <img src="image1.jpg" alt="Description of image 1">
+    <figcaption>This is the caption</figcaption>
+  </figure>
+
+  <!-- Image inside a link -->
+  <a href="https://link_for_image.com">
+    <img src="image2.jpg" alt="Image inside a link">
+  </a>
+
+  <!-- Four levels of headings -->
+  <h1>Main Heading 1</h1>
+  <h2>Subheading 2</h2>
+  <h3>Subheading 3</h3>
+  <h4>Subheading 4</h4>
+
+  <!-- A paragraph -->
+  <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+    
+  <!-- The rest of the code it was learnt in class in the past weeks -->
+</body>
+</html>
