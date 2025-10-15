@@ -1,0 +1,87 @@
+
+/* Base font and page setup */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 2rem;
+}
+
+/* Space between elements */
+a, figure, h1, h2, h3, h4, p {
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Headings style */
+h1 {
+  font-size: 2.5rem;
+  color: #0d2b5c;
+}
+h2 {
+  font-size: 2rem;
+  color: #4242a8;
+}
+h3 {
+  font-size: 1.5rem;
+  color: #5a5ac2;
+}
+h4 {
+  font-size: 1.2rem;
+  color: #7373d9;
+}
+
+/* Paragraph width and responsiveness */
+p {
+  max-width: 600px;
+  width: 90%;
+  color: #444;
+}
+
+/* Links (in-text) */
+a {
+  color: #0066cc;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and focus effect (now visible!) */
+a:hover,
+a:focus {
+  color: #ffffff;
+  background-color: #0066cc;
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Image inside link hover/focus */
+a img {
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  I wanted to center the image, but i couldnt ): */
+}
+
+/* Hover and focus style for the image */
+a:hover img,
+a:focus img {
+  transform: scale(1.03);
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* Chatgpt help me with the image part, I left the sizing in html and try to match
+the hover area behind the image to the image but I couldnt, maybe need to add the size
+here to the style sheet (?). It also help me with the hovering/focus part, i liked it,
+but I'll probably change it later in the project. */
+
+/* Figure caption */
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: left;
+  margin-top: 0.5rem;
+}
