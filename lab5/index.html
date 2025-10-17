@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Liliana Mata Lab #5 - Fall 2023</title>
+    <script src="libraries/d3.min.js"></script>
+    <script src="libraries/polygon.js"></script>
+
+     <script src="elements/fish.js"></script>
+    <!-- Your drawing and classmates' drawings -->
+    <script src="elements/butterfly.js"></script>     <!-- It's missing a choice option -->
+    <script src="elements/drummer.js"></script>
+    <script src="elements/ladybug.js"></script>
+    <script src="elements/panda.js"></script>         <!-- The panda is so big I prefered to use the elephant -->
+    <script src="elements/rabbit.js"></script>        <!-- It was missing he choice, but i fixed it, its better explain on her code -->
+    <script src="elements/rooster.js"></script>       <!-- I think it has an error -->
+    <script src="elements/elephant.js"></script>
+    
+</head>
+
+<body>
+    <!-- Change this list to include your drawing and those of your classmates -->
+    <p>Select the first element for your drawing:
+        <select id="choice1">
+            <option value="fish">Fish</option>
+            <option value="butterfly">Butterfly</option>
+            <option value="drummer">Drummer</option>
+            <option value="ladybug">Ladybug</option>
+            <option value="panda">Panda</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="rooster">Rooster</option>
+            <option value="elephant">Elephant</option>
+        </select>
+    </p>
+
+    <p>Position your first element: 
+        x:<input type="number" id="x1" value="100">, 
+        y:<input type="number" id="y1" value="300">
+    </p>
+
+    <!-- Change this list to include your drawing and those of your classmates -->
+    <p>Select the second element for your drawing:
+        <select id="choice2">
+            <option value="fish">Fish</option>
+            <option value="butterfly">Butterfly</option>
+            <option value="drummer">Drummer</option>
+            <option value="ladybug">Ladybug</option>
+            <option value="panda">Panda</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="rooster">Rooster</option>
+            <option value="elephant">Elephant</option>
+
+        </select>
+    </p>
+
+    <p>Position your second element: 
+        x:<input type="number" id="x2" value="300">, 
+        y:<input type="number" id="y2" value="300">
+    </p>
+
+     <!-- Origin -->
+    <p>Show origin points: 
+        <select id="origins">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </p>
+
+    <!-- Fish Decor -->
+    <label for="choiceFish">Fish Decor:</label>
+    <select id="choiceFish">
+        <option value="Bubbles">Bubbles</option>
+        <option value="No Bubbles">No Bubbles</option>
+    </select>
+    <br>
+
+    <!-- Drummer Decor -->
+    <label for="choiceDrummer">Drummer Pose:</label>
+    <select id="choiceDrummer">
+        <option value="drumming">Drumming</option>
+        <option value="resting">Resting</option>
+    </select>
+    <br>
+
+    <!-- Ladybug Head Type -->
+    <label for="choiceLadybug">Ladybug Head:</label>
+    <select id="choiceLadybug">
+        <option value="normal">Normal Head</option>
+        <option value="after">Triangle Head</option>
+    </select>
+    <br>
+
+    <!-- Rabbit Decor -->
+    <label for="choiceRabbit">Rabbit Decor:</label>
+    <select id="choiceRabbit">
+        <option value="No Carrot">No Carrot</option>
+        <option value="Carrot">Carrot</option>
+    </select>
+    <br>
+
+    <!-- Elephant Decor -->
+    <label for="choiceElephant">Elephant Glasses:</label>
+    <select id="choiceElephant">
+        <option value="off">No Glasses</option>
+        <option value="on">Glasses On</option>
+    </select>
+    <br>
+
+    <button id="action">Draw!</button>
+    <div id="canvas"></div>
+
+    <!-- main.js must always be last -->
+    <script src="main.js"></script>
+</body>
+
+</html>
