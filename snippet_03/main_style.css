@@ -1,0 +1,532 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffaf5;
+}
+
+/* Global 4-column grid for the entire site */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffaf5;
+}
+
+/* Header spans all columns but content follows grid logic */
+.site-header {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 0px rgba(15, 4, 86, 0.05);
+}
+
+/* Logo now in the first column */
+.logo img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Menu covers columns 3 and 4 
+First element inspired from Styleguides.io*/
+.menu {
+  grid-column: 3 / 5;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu a {
+  color: #2f486d;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #d98644;
+}
+
+
+/* responsive source https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+@media (max-width: 383px) { /* It sarted to look horrible at this point, the rest of the @media breakpoint are at 320px, i hope this is ok */
+  .site-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    grid-column: 1;
+    margin-bottom: 1rem;
+  }
+
+  .logo img {
+    width: 50%;
+    min-width: 200px; /* I tried for the logo to not be so small right before the breakpoint but I couldnt ): */
+    margin: 0 auto;
+  }
+
+  .menu {
+    grid-column: 1;
+  }
+
+  .menu ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .menu li {
+    list-style: none;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+}
+
+
+/* --- Header Responsive Layout Tablet ---
+I needed a tablet breakpoint for the header and the headers section to look better */
+@media (max-width: 700px) {
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+  }
+
+  .menu li {
+    flex: 1 1 40%;
+    text-align: center;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* --- Hero Section --- 
+chatgpt help me most with this section, had a couple of problems
+for the image to be behind the text and the text to not go crazy */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  grid-column: 1 / 5;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+/* The image sits behind using grid layering */
+/* Second element inspired from Styleguides.io */
+.hero-image {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-text {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  z-index: 2;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  background: transparent;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-down {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  display: inline-flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+  gap: 0.5rem;
+}
+
+.scroll-down .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down:hover,
+.scroll-down:focus {
+  color: #f6d89f;
+  transform: translateY(3px);
+}
+
+.scroll-down:hover .arrow,
+.scroll-down:focus .arrow {
+  transform: translateY(5px);
+}
+
+/* --- Responsive Hero Section
+I chose 700 px for the breakpoint of the pages, 
+then I read the other homework and work it out for the new breakpoints */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+/* Cellphone responsiveness  */
+@media (max-width: 320px) {
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero-image {
+    height: 300px;
+    filter: brightness(0.85);
+  }
+
+  .hero-text {
+    grid-column: 1;
+    padding: 1rem;
+    align-items: left;
+    margin-top: -7rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .scroll-down {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* --- Stories Section --- */
+.stories {
+  grid-column: 1 / 5;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.stories h2 {
+  font-size: 2.5rem;
+  color: #2f486d;
+}
+
+.stories > p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+.story-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: left;
+}
+
+.story {
+  grid-column: span 2;
+  background-color: #fffaf5;
+  border: 2px solid #e6d7c1;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+}
+
+.story h3 {
+  color: #d98644;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.story p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* responsive https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+@media (max-width: 1024px) {
+  .story-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .stories {
+    padding: 2rem 1rem;
+  }
+
+  .stories h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Cellphone responsiveness */
+@media (max-width: 320px) {
+  .stories {
+    padding: 1rem;
+  }
+
+  .stories h2 {
+    font-size: 1.4rem;
+  }
+
+  .story h3 {
+    font-size: 1.1rem;
+  }
+
+  .story p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+
+
+
+/* --- About & Social Section --- */
+.about-section {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.about-text {
+  grid-column: 1 / 3;
+}
+
+.about-text h3 {
+  color: #2f486d;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.about-text a {
+  color: #d98644;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.about-text a:hover {
+  color: #2f486d;
+  border-color: #d98644;
+}
+
+.about-image {
+  grid-column: 3 / 5;
+  text-align: center;
+}
+
+.about-image img {
+  width: 80%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Section */
+@media (max-width: 1024px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text,
+  .about-image {
+    grid-column: 1 / 5;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+/* Cellphone responsive*/
+@media (max-width: 320px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-image {
+    justify-self: center;
+    margin-top: 1rem;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* --- Footer --- */
+.site-footer {
+  grid-column: 1 / 5;
+  background-color: #2f486d;
+  color: #fffaf5;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content h4 {
+  font-size: 1.8rem;
+  color: #fffaf5;
+  margin-bottom: 1rem;
+}
+
+.subscribe-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #e6d7c1;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.subscribe-form button {
+  background-color: #d98644;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subscribe-form button:hover,
+.subscribe-form button:focus {
+  background-color: #f5a766;
+  transform: translateY(-3px);
+}
+
+.footer-content p {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #e6d7c1;
+}
+
+
+
+/* --- Large Screens (1920px and above) --- */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+    gap: 3rem;
+  }
+
+  .hero-image {
+    height: 650px;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .stories h2 {
+    font-size: 3rem;
+  }
+
+  .about-section {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
