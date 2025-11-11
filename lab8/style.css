@@ -1,0 +1,32 @@
+/* General text styling for all SVG labels */
+text {
+  font-family: 'Arial', sans-serif;
+  user-select: none;
+  fill: black;
+}
+
+/* Axis titles */
+.axis-label {
+  font-weight: bold;
+  font-size: 12px;
+  fill: #222;
+}
+
+/* Axis numbers and coordinate labels (like 0, 100, 200…) */
+.axis-number {
+  font-size: 10px;
+  fill: #555;
+}
+
+/* Legend titles */
+.legend-title {
+  font-weight: bold;
+  font-size: 11px;
+  fill: black;
+}
+
+/* Legend labels (like “Happy”, “Relax”, “More pics taken”, etc.) */
+.legend-label {
+  font-size: 11px;
+  fill: black;
+}
