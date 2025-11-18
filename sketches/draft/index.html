@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualization Sketches – Drafts</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Phase 3b Term Project Sketches</h1>
+
+    <!-- DATASET DESCRIPTION CARD -->
+    <div class="card">
+        <h2>My Data</h2>
+        <p>This collection of data tracks some of the activities I’ve been doing more often lately, 
+          mostly because I made new friendships where we encourage each other to stay creative just for fun.</p>
+        <p>I collect the date, the time I spend talking to my friends, the time I spend drawing, the number of pictures I take, 
+          and my emotional states in the morning and at night.</p>
+        <p>This dataset helps me analyze how social activity and creativity may relate to my emotional state or vice versa depending on how I choose to visualize it.</p>
+    </div>
+
+    <!-- Sketch 1 -->
+    <div class="card">
+        <h2>Sketch 1 — Time spent with friends / Evening Emotion</h2>
+
+        <p><strong>Hypothesis:</strong> As time spent with friends increases, my evening emotional state improves. 
+          Days with more drawing time also tend to have calmer evenings.</p>
+
+        <p><strong>Variables used:</strong></p>
+        <ul>
+            <li>timeWithFriends</li>
+            <li>emotionalState.night</li>
+            <li>drawingTime</li>
+        </ul>
+
+        <p><strong>Units:</strong></p>
+        <ul>
+            <li>Minutes with friends (0–317)</li>
+            <li>Evening emotional state level (0–5)</li>
+            <li>Minutes drawing (0–120 - each number is change by 0.5 pt. so it wont be too big)</li>
+        </ul>
+
+        <p><strong>Representation:</strong><br>
+            A scatterplot where the Y-axis shows time spent with friends and the X-axis shows evening emotional state. 
+            Each point is drawn as a circle, and the size of the bubble changes based on drawing time that day.
+        </p>
+
+        <p><a class="button" href="sketch1.pdf">View sketch1.pdf</a></p>
+    </div>
+
+
+    <!-- Sketch 2 -->
+    <div class="card">
+        <h2>Sketch 2 — Time spent with friends / Photos taken</h2>
+
+        <p><strong>Hypothesis:</strong> As the days progress, the higher the time I spent with friends. 
+          Days with more pictures seem to highlight more socially active days.</p>
+
+        <p><strong>Variables used:</strong></p>
+        <ul>
+            <li>date</li>
+            <li>timeWithFriends</li>
+            <li>picturesTaken</li>
+        </ul>
+
+        <p><strong>Units:</strong></p>
+        <ul>
+            <li>Minutes with friends (0 - 500)</li>
+            <li>Number of pictures taken (1–30)</li>
+            <li>Dates (Oct 23 – Nov)</li>
+        </ul>
+
+        <p><strong>Representation:</strong><br>
+            A line graph where the X-axis shows each day in order and the Y-axis shows minutes spent with friends. 
+            At each point where the day and minutes meet, a circle is placed that grows or shrinks depending on the amount of pictures taken.
+        </p>
+
+        <p><a class="button" href="sketch2.pdf">View sketch2.pdf</a></p>
+    </div>
+
+    <!-- Sketch 3 -->
+    <div class="card">
+        <h2>Sketch 3 — “Christmas Lights” Date / Emotional state</h2>
+
+        <p><strong>Hypothesis:</strong> As I spend more time with friends, both my morning and night emotional states tend to brighten. 
+          Higher social activity leads to more consistent emotional levels throughout the day.</p>
+
+        <p><strong>Variables used:</strong></p>
+        <ul>
+            <li>date</li>
+            <li>emotionalState.morning</li>
+            <li>emotionalState.night</li>
+            <li>timeWithFriends</li>
+        </ul>
+
+        <p><strong>Units:</strong></p>
+        <ul>
+            <li>Dates (Oct/Nov/December)</li>
+            <li>Emotional state (0–10 scale)</li>
+            <li>Minutes with friends (0–500)</li>
+        </ul>
+
+        <p><strong>Representation:</strong><br>
+            A horizontal “string of lights” timeline where each light represents a day. 
+            Morning emotion appears as a bulb above the wire, and night emotion appears as a bulb below. 
+            Color shows emotional level, and the glow intensity of each bulb increases based on the time spent with friends.
+        </p>
+
+        <p><a class="button" href="sketch3.pdf">View sketch3.pdf</a></p>
+    </div>
+
+    <div class="card">
+        <h2>Credits</h2>
+
+        <p><strong>Dear Data</strong> — 
+            <a class="link" href="https://www.dear-data.com/theproject" target="_blank">
+                https://www.dear-data.com/theproject
+            </a><br>
+            This website helped me think outside the box. I was amazed by the unique shapes used to represent personal data, 
+            and the upcoming holidays combined with these examples inspired the creative direction for my third sketch.
+        </p>
+
+        <p><strong>Connected Scatterplot Example</strong> — 
+            <a class="link" href="https://r-graph-gallery.com/connected_scatterplot_ggplot2.html" target="_blank">
+                https://r-graph-gallery.com/connected_scatterplot_ggplot2.html
+            </a><br>
+            This example helped me choose a structure for my second sketch, 
+            showing how a line can connect sequential days while still showing a third variable.
+        </p>
+
+        <p><strong>Dataviz Catalogue</strong> — 
+            <a class="link" href="https://datavizcatalogue.com/index.html" target="_blank">
+                https://datavizcatalogue.com/index.html
+            </a><br>
+            This site helped me understand the range of chart types available and think about which ones fit my dataset.
+        </p>
+    </div>
+
+
+  </div><!-- /container -->
+
+</body>
+</html>
