@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Liliana Mata – Lab #9 Plot 2</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+            <h1>PLOT 2: How my social days evolve through time</h1>
+
+            <h2>Hypothesis:</h2>  
+            <p>As the days I gathered as data increase, the time I spend with friends also increases. <!-- I change the format of the hypothesis from the sketch to matched how we've been writing them-->
+            Days where I take more pictures also seem to match the days that feel more socially active.</p>
+
+            <h2>This was chose because:</h2>
+            <p>Although this may seem like one of the simplest ways to visualize data, 
+                I think it was important to use the date as one of the axes. 
+                There is a lot to learn when you can actually see the passing of time. This plot connects each day with a line, 
+                letting me see whether my social time is rising, falling, or staying consistent. 
+                The circles add the third value used, the size shows how many pictures I took that day. 
+                I can notice which days were not only socially full, but also creatively engaging.</p>
+
+            <h2>Technical Implementation:</h2>
+            <p>I updated the date format in my dataset so d3 could read it easily, instead of doing the whole process with newDate() or d3.timeParse(),
+                which was a little intimidating to thing of. So I chose to write the dates in the exact format we were shown in class.
+                I then used <code>Array.sort()</code> to make sure the days appear in the correct order along the X-axis. 
+                Fitting all the dates was a bit challenging, but it worked out in the end after adjusting the text rotation and spacing.
+                A new thing I learned in this plot was the d3.line() generator. The line tool helped me visually track increases and decreases in my social time.
+        </div>
+
+        <div class="card" id="container">
+            <div id="legend"></div>
+            <div id="canvas"></div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

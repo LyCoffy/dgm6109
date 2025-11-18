@@ -1,0 +1,50 @@
+body {
+    background-color: #e7e5e8;
+    margin: 0;
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Centered wrapper */
+.container {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #400d58;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+    background-color: #f7f6f6;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.20);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    background-color: #5b3974;
+    color: white;
+    padding: 12px 20px;
+    margin: 12px auto;
+    width: 70%;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #400d58;
+}
