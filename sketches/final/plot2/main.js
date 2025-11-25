@@ -477,5 +477,5 @@ legendItems.forEach((item, i) => {
     .attr("alignment-baseline", "middle");
 });
 
-/* used as reference as well
+/* used as a visual reference 
 https://r-graph-gallery.com/stacked-area-chart-plotly.html  */
