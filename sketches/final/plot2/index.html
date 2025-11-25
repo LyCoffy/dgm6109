@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Liliana Mata – Lab #9 Plot 2</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+            <h1>PLOT 2: How my social and creatives days evolve through time</h1>
+
+            <h2>Hypothesis:</h2>  
+            <p>As the days I gathered as data increase, the time I spend with friends also increases. <!-- I change the format of the hypothesis from the sketch to matched how we've been writing them-->
+            Days where I spend more time drawing also seem to match the days that feel more socially active.</p>
+
+            <h2>This was chose because:</h2>
+            <p>I think it was important to use the date as one of the axes. 
+            There is a lot to learn when you can actually see the passing of time. This plot connects each day with a coloured area, 
+            letting me see whether my social time is rising, falling, or staying consistent. 
+            The top area adds the third value used, the area shows how much time I spend drawing that day. 
+            I can notice which days were not only socially full, but also creatively engaging.</p>
+
+            <h2>Technical Implementation:</h2>
+            <p>For this graph I mainly used <code>.map(), d3.stack(),</code> and the <code>d3.area()</code> generator. 
+            With <code>.map()</code> I converted each day in my dataset into a simple index number, which made it easier to place everything correctly 
+            along the X-axis. Then I used <code>d3.stack()</code> to put my two values (drawing time and time with friends) on top of each other. 
+            Stacking was new for me, but now I understand that it basically adds the values together so the chart can draw the bottom layer first and then the layer on top.
+            After that, the <code>d3.area()</code> tool let me actually draw the colored shapes. The two functions, y0 and y1, define the bottom and top of each area, 
+            so that’s what creates the “mountain” look.
+        </div>
+
+        <div class="card" id="container">
+            <div id="legend"></div>
+            <div id="canvas"></div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
