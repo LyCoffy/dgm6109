@@ -73,7 +73,12 @@ function buildScales(data) {
 
 /* ---------------- BULB SHAPE ---------------- */
 
-function drawBulb(x, y, size, color, upsideDown = false) {
+function drawBulb(x, y, size, color, upsideDown) {
+
+    // fake default value for upsideDown
+    if (typeof upsideDown === "undefined") {
+        upsideDown = false;
+    }
 
     let g = bulbsLayer.append("g");
 
@@ -209,8 +214,8 @@ function drawVisualization(data) {
     let wireWiggle = 8;
 
     let wireLine = d3.line()
-        .x(d => xScale(d.index))
-        .y(() => midY + (Math.random() - 0.8) * wireWiggle * 2)
+        .x(function (d) { return xScale(d.index); })
+        .y(function () { return midY + (Math.random() - 0.8) * wireWiggle * 2; })
         .curve(d3.curveBasis);
 
     wiresLayer.append("path")
@@ -223,13 +228,13 @@ function drawVisualization(data) {
     let extraOffsets = [-2, 2];
     let extraWiggles = [5, 5];
 
-    extraOffsets.forEach((offset, i) => {
+    extraOffsets.forEach(function (offset, i) {
 
         let wiggle = extraWiggles[i];
 
         let wireLine2 = d3.line()
-            .x(d => xScale(d.index))
-            .y(() => midY + offset + (Math.random() - 0.8) * wiggle * 2)
+            .x(function (d) { return xScale(d.index); })
+            .y(function () { return midY + offset + (Math.random() - 0.8) * wiggle * 2; })
             .curve(d3.curveBasis);
 
         wiresLayer.append("path")
@@ -244,10 +249,10 @@ function drawVisualization(data) {
 
     /* --- SOCKET ROWS --- */
 
-    data.forEach(d => {
+    data.forEach(function (d) {
         let x = xScale(d.index);
 
-        drawSocket(x, midY - 5);     
+        drawSocket(x, midY - 5);
         drawSocketUpsideDown(x, midY - 25);
     });
 
@@ -265,7 +270,7 @@ function drawVisualization(data) {
 
     /* --- MORNING BULBS --- */
 
-    data.forEach(d => {
+    data.forEach(function (d) {
         drawBulb(
             xScale(d.index),
             midY - 38,
@@ -277,7 +282,7 @@ function drawVisualization(data) {
 
     /* --- NIGHT BULBS --- */
 
-    data.forEach(d => {
+    data.forEach(function (d) {
         drawBulb(
             xScale(d.index),
             midY - 3,
@@ -292,7 +297,9 @@ function drawVisualization(data) {
 
     let xAxis = d3.axisBottom(xScale)
         .ticks(data.length)
-        .tickFormat((d, i) => data[i] ? data[i].date : "");
+        .tickFormat(function (d, i) {
+            return data[i] ? data[i].date : "";
+        });
 
     svg.append("g")
         .attr("transform", "translate(0," + (svgHeight - margin.bottom) + ")")
