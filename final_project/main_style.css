@@ -148,7 +148,6 @@ p {
   margin-right: 0.5rem;
 }
 
-/* 🔥 FIXED: Smaller icons in diet category cards */
 .icon-card img {
   width: 32px;
   height: 32px;
@@ -209,6 +208,11 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+.recipe-link {
+    display: block;
+    color: inherit;
 }
 
 .recipe-card {
