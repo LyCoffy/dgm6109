@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeBites – Lactose Free Recipes</title>
 
     <link rel="stylesheet" href="normalize.css">
@@ -22,7 +22,11 @@
         </div>
 
         <div class="search-bar">
-            <input type="text" placeholder="Search lactose free recipes…">
+            <input 
+                type="text" 
+                placeholder="Search lactose free recipes…" 
+                aria-label="Search lactose free recipes"
+            >
         </div>
 
         <nav class="menu">
@@ -43,7 +47,7 @@
     <section class="hero breakfast-hero">
 
         <div class="hero-text">
-            <img src="icons/lactose.svg" alt="Lactose Free icon" class="diet-hero-icon">
+            <img src="icons/lactose.svg" alt="Lactose free symbol" class="diet-hero-icon">
 
             <h1>Lactose Free</h1>
 
@@ -57,7 +61,7 @@
         </div>
 
         <div class="hero-image">
-            <img src="images/lactose.jpg" alt="Lactose free dishes">
+            <img src="images/lactose.jpg" alt="Assorted lactose free dishes">
         </div>
 
     </section>
@@ -104,7 +108,7 @@
             <a href="#" class="recipe-link">
                 <article class="recipe-row">
                     <div class="recipe-image">
-                        <img src="images/yogurt.jpg" alt="Chia parfait">
+                        <img src="images/yogurt.jpg" alt="Lactose free yogurt and chia parfait">
                     </div>
 
                     <div class="recipe-info">
@@ -128,7 +132,7 @@
             <a href="#" class="recipe-link">
                 <article class="recipe-row">
                     <div class="recipe-image">
-                        <img src="images/oatmeal.jpg" alt="Berry oat bowl">
+                        <img src="images/oatmeal.jpg" alt="Warm berry oat bowl made with dairy free milk">
                     </div>
 
                     <div class="recipe-info">
@@ -153,7 +157,7 @@
             <a href="#" class="recipe-link">
                 <article class="recipe-row">
                     <div class="recipe-image">
-                        <img src="images/banana.jpg" alt="Banana muffins">
+                        <img src="images/banana.jpg" alt="Banana oat muffins made without dairy">
                     </div>
 
                     <div class="recipe-info">
@@ -196,7 +200,7 @@
 
 
 <!-- ---------------- FOOTER ---------------- -->
-<footer class="site-footer">
+<footer class="site-footer" id="site-footer">
     <h3>SafeBites</h3>
     <p>A Recipe Finder for Dietary Needs</p>
 
