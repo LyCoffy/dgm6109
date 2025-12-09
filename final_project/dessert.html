@@ -21,9 +21,9 @@
             </a>
         </div>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Search recipes, ingredients, diets…">
-        </div>
+        <form class="search-bar" action="#" method="get">
+            <input type="text" name="q" placeholder="Search recipes, ingredients, diets…" aria-label="Search">
+        </form>
 
         <nav class="menu">
             <ul>
@@ -40,7 +40,7 @@
 
 
     <!-- ---------------- HERO ---------------- -->
-    <section class="hero breakfast-hero">
+    <section class="hero dessert-hero">
 
         <div class="hero-text">
             <h1>Dessert</h1>
@@ -166,13 +166,13 @@
         <!-- ---------------- PAGINATION ---------------- -->
         <div class="pagination">
             <a href="#" class="active-page">1</a>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <a href="#">2</a>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <a href="#">3</a>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <a href="#">4</a>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <a href="#">...</a>
         </div>
 
@@ -201,3 +201,4 @@
 
 </body>
 </html>
+
