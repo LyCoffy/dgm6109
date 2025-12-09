@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBites – Gluten Free Recipes</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!------------------ HEADER ------------------>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/SafeBitesLogo.svg" alt="SafeBites logo">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search gluten free recipes…">
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- ---------------- HERO ---------------- -->
+    <section class="hero breakfast-hero">
+
+        <div class="hero-text">
+            <img src="icons/gluten.svg" alt="Gluten Free icon" class="diet-hero-icon">
+
+            <h1>Gluten Free</h1>
+
+            <p>
+                Gluten free eating focuses on ingredients that keep your digestion calm and comfortable.
+                These meals avoid wheat, barley, and rye while still giving you flavor, texture, and satisfaction.
+            </p>
+
+            <a href="#recipes" class="cta">Explore gluten free recipes</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/gluten.jpg" alt="Gluten free dishes">
+        </div>
+
+    </section>
+
+
+
+    <!-- ---------------- INTRO / QUESTION SECTION ---------------- -->
+    <section class="breakfast-intro">
+        <h2>Why consider going gluten free?</h2>
+
+        <div class="question-grid">
+
+            <p class="left">
+                <strong>What does Gluten Free mean?</strong><br><br>
+                Gluten is a protein found in wheat, barley, and rye. Some people react to it with bloating, discomfort, 
+                fatigue, or digestive irritation. Gluten free meals avoid these ingredients, using alternatives like 
+                oats, rice, corn, quinoa, and nut flours.<br><br>
+                Many gluten free dishes are naturally light and easy for the body to process.
+            </p>
+
+            <p class="right">
+                <strong>Why it might help you:</strong><br><br>
+                Reducing gluten can ease symptoms like stomach pain, tiredness, or inflammation.  
+                Many people feel brighter and more balanced after switching to meals that are gentler on digestion.<br><br>
+                Even if you’re not fully gluten intolerant, exploring gluten free meals can help you discover 
+                recipes that leave you feeling more comfortable and energized.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ---------------- FILTERS + RECIPES ---------------- -->
+    <section id="recipes" class="recent-section">
+        <h2>Latest Gluten Free Recipes</h2>
+        <p>These gluten free recipes are cozy, simple, and easy on your stomach.  
+           A great way to enjoy comfort food without discomfort.</p>
+
+        <div class="vertical-recipes">
+
+            <!-- CARD 1 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/pancakes.jpg" alt="Gluten free pancakes">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Gluten Free Pancakes</h4>
+                        <p>
+                            Light, fluffy, and naturally sweet — these pancakes are perfect for a morning 
+                            that feels gentle and comforting.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Banana</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 2 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/banana.jpg" alt="Banana oat muffins">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Banana Oat Muffins</h4>
+                        <p>
+                            Soft and naturally sweet muffins made with simple, gluten free ingredients.  
+                            Perfect for busy mornings or light snacks.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Banana</a>
+                            <a href="#">Oats</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 3 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/yogurt.jpg" alt="Chia parfait">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Yogurt and Chia Parfait</h4>
+                        <p>
+                            Fresh, light, and perfect when you want something sweet without anything heavy.  
+                            Easy to digest and endlessly customizable.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Lactose Free</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+
+
+
+        <!-- ---------------- PAGINATION ---------------- -->
+        <div class="pagination">
+            <a href="#" class="active-page">1</a>
+            <span>·</span>
+            <a href="#">2</a>
+            <span>·</span>
+            <a href="#">3</a>
+            <span>·</span>
+            <a href="#">4</a>
+            <span>·</span>
+            <a href="#">...</a>
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="site-footer">
+    <h3>SafeBites</h3>
+    <p>A Recipe Finder for Dietary Needs</p>
+
+    <nav class="footer-menu">
+        <a href="breakfast.html">Breakfast</a> ·
+        <a href="lunch.html">Lunch</a> ·
+        <a href="dinner.html">Dinner</a> ·
+        <a href="dessert.html">Dessert</a> ·
+        <a href="snacks.html">Snacks</a>
+    </nav>
+
+    <p class="copyright">
+        © 2025 — Made to help you eat better, feel better, and enjoy food again.
+    </p>
+</footer>
+
+</body>
+</html>

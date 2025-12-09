@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBites – Snack Recipes</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!------------------ HEADER ------------------>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/SafeBitesLogo.svg" alt="SafeBites logo">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes, ingredients, diets…">
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacks.html" class="active">Snacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- ---------------- HERO ---------------- -->
+    <section class="hero breakfast-hero">
+
+        <div class="hero-text">
+            <h1>Snacks</h1>
+            <p>Light, simple, and comforting bites for any moment of the day.  
+               These snacks keep you satisfied while staying gentle on your stomach.</p>
+
+            <a href="#recipes" class="cta">Explore snack recipes</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/snacks.png" alt="Snack dishes">
+        </div>
+
+    </section>
+
+
+
+    <!-- ---------------- INTRO ---------------- -->
+    <section class="breakfast-intro">
+        <h2>Snacks that keep you energized</h2>
+
+        <div class="question-grid">
+            <p class="left">
+                The right snack can refresh your energy, improve your focus, and keep you feeling steady 
+                between meals.  
+                <br><br>
+                These gentle options are made to give you a boost without upsetting your digestion.
+            </p>
+
+            <p class="right">
+                Whether you're craving something crunchy, creamy, or naturally sweet, SafeBites helps you find 
+                snacks that work with your body.  
+                Enjoy small bites that feel good and taste even better.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- ---------------- FILTERS + RECIPES ---------------- -->
+    <section id="recipes" class="recent-section">
+        <h2>Latest Snack Recipes</h2>
+        <p>Filter the recipes by the diet of your preference:</p>
+
+        <div class="diet-filter-buttons">
+            <button class="filter-btn">Vegan</button>
+            <button class="filter-btn">Low FODMAP</button>
+            <button class="filter-btn">Vegetarian</button>
+            <button class="filter-btn">Gluten Free</button>
+            <button class="filter-btn">Lactose Free</button>
+        </div>
+
+
+
+        <div class="vertical-recipes">
+
+            <!-- CARD 1 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/nuts.jpg" alt="Fruit and nut bowl">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Fruit and Nut Bowl</h4>
+                        <p>
+                            A light mix of fresh fruit and gentle nuts that gives you quick energy 
+                            without feeling heavy. Simple, refreshing and perfect for mid-day cravings.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 2 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/veggies.jpg" alt="Veggie sticks with dip">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Veggie Sticks with Dip</h4>
+                        <p>
+                            Crunchy, refreshing vegetables paired with a gentle dip.  
+                            A great option when you want something clean and satisfying between meals.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegan</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 3 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/ricecake.jpg" alt="Rice cakes with banana">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Rice Cakes with Banana</h4>
+                        <p>
+                            A simple and gentle snack with natural sweetness.  
+                            Light, easy to digest and ideal for busy days when you need a quick, calm boost.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Banana</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+
+
+
+        <!-- ---------------- PAGINATION ---------------- -->
+        <div class="pagination">
+            <a href="#" class="active-page">1</a>
+            <span>·</span>
+            <a href="#">2</a>
+            <span>·</span>
+            <a href="#">3</a>
+            <span>·</span>
+            <a href="#">4</a>
+            <span>·</span>
+            <a href="#">...</a>
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="site-footer">
+    <h3>SafeBites</h3>
+    <p>A Recipe Finder for Dietary Needs</p>
+
+    <nav class="footer-menu">
+        <a href="breakfast.html">Breakfast</a> ·
+        <a href="lunch.html">Lunch</a> ·
+        <a href="dinner.html">Dinner</a> ·
+        <a href="dessert.html">Dessert</a> ·
+        <a href="snacks.html">Snacks</a>
+    </nav>
+
+    <p class="copyright">
+        © 2025 — Made to help you eat better, feel better, and enjoy food again.
+    </p>
+</footer>
+
+</body>
+</html>

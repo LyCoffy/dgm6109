@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBites – Dessert Recipes</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!------------------ HEADER ------------------>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/SafeBitesLogo.svg" alt="SafeBites logo">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes, ingredients, diets…">
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html" class="active">Dessert</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- ---------------- HERO ---------------- -->
+    <section class="hero breakfast-hero">
+
+        <div class="hero-text">
+            <h1>Dessert</h1>
+            <p>Enjoy sweetness without discomfort. These desserts are gentle, light, 
+            and perfect for moments when you want something tasty that still feels good for your body.</p>
+
+            <a href="#recipes" class="cta">Explore dessert recipes</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/dessert.png" alt="Dessert dishes">
+        </div>
+
+    </section>
+
+
+
+    <!-- ---------------- INTRO ---------------- -->
+    <section class="breakfast-intro">
+        <h2>Treat yourself with desserts that feel good</h2>
+
+        <div class="question-grid">
+            <p class="left">
+                Desserts can be comforting and joyful, especially when they are made with ingredients your body 
+                appreciates. A gentle dessert can lift your mood while keeping you comfortable.
+                <br><br>
+                These light options give you sweetness without overwhelming your digestion.
+            </p>
+
+            <p class="right">
+                SafeBites helps you discover desserts that match your dietary needs.  
+                Whether you want something fruity, creamy, or refreshing, these recipes let you enjoy a treat 
+                without worrying about discomfort afterward.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- ---------------- FILTERS + RECIPES ---------------- -->
+    <section id="recipes" class="recent-section">
+        <h2>Latest Dessert Recipes</h2>
+        <p>Filter the recipes by the diet of your preference:</p>
+
+        <div class="diet-filter-buttons">
+            <button class="filter-btn">Vegan</button>
+            <button class="filter-btn">Low FODMAP</button>
+            <button class="filter-btn">Vegetarian</button>
+            <button class="filter-btn">Gluten Free</button>
+            <button class="filter-btn">Lactose Free</button>
+        </div>
+
+
+
+        <div class="vertical-recipes">
+
+            <!-- CARD 1 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/yogurtfruit.jpg" alt="Fruit yogurt cup">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Fruit Yogurt Cup</h4>
+                        <p>A smooth and refreshing blend of yogurt and fresh fruit.  
+                           Light, gentle and perfect for when you crave something sweet without feeling heavy.</p>
+
+                        <div class="tags">
+                            <a href="#">Lactose Free</a>
+                            <a href="#">Vegetarian</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 2 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/Bites.jpg" alt="Chocolate bites">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Soft Chocolate Bites</h4>
+                        <p>A simple, gentle treat with soft chocolate flavor.  
+                           These little bites satisfy cravings while staying easy on digestion.</p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Gluten Free</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 3 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/apples.jpg" alt="Baked apples">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Warm Baked Apples</h4>
+                        <p>Soft apples with a warm, cozy flavor.  
+                           A gentle dessert that feels comforting and naturally sweet.</p>
+
+                        <div class="tags">
+                            <a href="#">Vegan</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+
+
+
+        <!-- ---------------- PAGINATION ---------------- -->
+        <div class="pagination">
+            <a href="#" class="active-page">1</a>
+            <span>·</span>
+            <a href="#">2</a>
+            <span>·</span>
+            <a href="#">3</a>
+            <span>·</span>
+            <a href="#">4</a>
+            <span>·</span>
+            <a href="#">...</a>
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="site-footer">
+    <h3>SafeBites</h3>
+    <p>A Recipe Finder for Dietary Needs</p>
+
+    <nav class="footer-menu">
+        <a href="breakfast.html">Breakfast</a> ·
+        <a href="lunch.html">Lunch</a> ·
+        <a href="dinner.html">Dinner</a> ·
+        <a href="dessert.html">Dessert</a> ·
+        <a href="snacks.html">Snacks</a>
+    </nav>
+
+    <p class="copyright">
+        © 2025 — Made to help you eat better, feel better, and enjoy food again.
+    </p>
+</footer>
+
+</body>
+</html>

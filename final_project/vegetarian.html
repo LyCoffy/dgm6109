@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBites – Vegetarian Recipes</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!------------------ HEADER ------------------>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/SafeBitesLogo.svg" alt="SafeBites logo">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search vegetarian recipes…">
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- ---------------- HERO ---------------- -->
+    <section class="hero breakfast-hero">
+
+        <div class="hero-text">
+            <img src="icons/vegetarian.svg" alt="Vegetarian icon" class="diet-hero-icon">
+            <h1>Vegetarian</h1>
+
+            <p>
+                A gentle, nourishing way of eating centered on plants, grains, dairy, and eggs.
+                Vegetarian meals are flexible, comforting, and often easier to digest than heavy meat-based dishes.
+            </p>
+
+            <a href="#recipes" class="cta">Try your first vegetarian recipe</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/vegetarian.jpg" alt="Vegetarian dishes">
+        </div>
+
+    </section>
+
+
+
+    <!-- ---------------- INTRO / QUESTION SECTION ---------------- -->
+    <section class="breakfast-intro">
+        <h2>Why consider eating vegetarian?</h2>
+
+        <div class="question-grid">
+
+            <p class="left">
+                <strong>What does Vegetarian mean?</strong><br><br>
+                A vegetarian diet focuses on plant-based foods like vegetables, grains, fruits, nuts, beans, and legumes. 
+                Unlike veganism, vegetarians can also enjoy dairy and eggs, making it a flexible and approachable lifestyle.  
+                <br><br>It’s a way of eating that emphasizes lighter meals that tend to be easier for many people to digest.
+            </p>
+
+            <p class="right">
+                <strong>Why it might help you:</strong><br><br>
+                Vegetarian meals often feel more energizing and less heavy than meals centered around red or processed meats.  
+                Many people experience less bloating, smoother digestion, and more stable energy throughout the day.  
+                <br><br>Even adding a few vegetarian dishes per week can help you feel lighter, balanced, and more comfortable.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ---------------- FILTERS + RECIPES ---------------- -->
+    <section id="recipes" class="recent-section">
+        <h2>Latest Vegetarian Recipes</h2>
+        <p>Vegetarian meals can be cozy, fresh, and incredibly creative. These recipes are gentle, filling, 
+           and perfect if you're curious about adding more plant-forward meals to your day.</p>
+
+        <div class="vertical-recipes">
+
+            <!-- CARD 1 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/avocado.jpg" alt="Avocado Egg Toast">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Avocado Egg Toast</h4>
+                        <p>
+                            A delicious balance of creamy avocado and soft eggs.  
+                            This simple breakfast keeps you full and energized without feeling heavy.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Protein-rich</a>
+                            <a href="#">Egg</a>
+                            <a href="#">Avocado</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 2 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/yogurt.jpg" alt="Yogurt and Chia Parfait">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Yogurt and Chia Parfait</h4>
+                        <p>
+                            A light, refreshing breakfast with creamy yogurt and gentle chia seeds.  
+                            Perfect when you want something sweet, soothing, and easy to digest.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Lactose Free</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+
+            <!-- CARD 3 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/banana.jpg" alt="Banana Oat Muffins">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Banana Oat Muffins</h4>
+                        <p>
+                            Naturally sweet muffins that make an easy grab-and-go breakfast.  
+                            Filling, nutritious, and made with simple vegetarian ingredients.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Banana</a>
+                            <a href="#">Oats</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+
+
+
+        <!-- ---------------- PAGINATION ---------------- -->
+        <div class="pagination">
+            <a href="#" class="active-page">1</a>
+            <span>·</span>
+            <a href="#">2</a>
+            <span>·</span>
+            <a href="#">3</a>
+            <span>·</span>
+            <a href="#">4</a>
+            <span>·</span>
+            <a href="#">...</a>
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="site-footer">
+    <h3>SafeBites</h3>
+    <p>A Recipe Finder for Dietary Needs</p>
+
+    <nav class="footer-menu">
+        <a href="breakfast.html">Breakfast</a> ·
+        <a href="lunch.html">Lunch</a> ·
+        <a href="dinner.html">Dinner</a> ·
+        <a href="dessert.html">Dessert</a> ·
+        <a href="snacks.html">Snacks</a>
+    </nav>
+
+    <p class="copyright">
+        © 2025 — Made to help you eat better, feel better, and enjoy food again.
+    </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBites – Dinner Recipes</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!------------------ HEADER ------------------>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/SafeBitesLogo.svg" alt="SafeBites logo">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes, ingredients, diets…">
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html" class="active">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ---------------- HERO ---------------- -->
+    <section class="hero dinner-hero">
+        <div class="hero-text">
+            <h1>Dinner</h1>
+            <p>End your day with meals that bring comfort without discomfort. These dishes are warm, calming, and 
+            designed to help your body relax while still giving you the nourishment you need.</p>
+
+            <a href="#recipes" class="cta">See dinner recipes</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/dinner.png" alt="Dinner dishes">
+        </div>
+    </section>
+
+
+    <!-- ---------------- INTRO ---------------- -->
+    <section class="breakfast-intro">
+        <h2>A soothing dinner makes your evening feel lighter</h2>
+
+        <div class="question-grid">
+            <p class="left">
+                Dinner is the moment your body begins to wind down. Eating meals that are gentle and balanced helps 
+                you avoid discomfort at night and supports better rest.
+                <br><br>
+                Choosing calming ingredients can make your evenings feel smoother and more peaceful.
+            </p>
+
+            <p class="right">
+                SafeBites helps you find dinner ideas that support digestion, reduce triggers, and still let you enjoy 
+                all the flavor. These dishes keep you comfortable while ending your day in a comforting way.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ---------------- FILTERS + RECIPES ---------------- -->
+    <section id="recipes" class="recent-section">
+        <h2>Latest Dinner Recipes</h2>
+        <p>Filter the recipes by the diet of your preference:</p>
+
+        <div class="diet-filter-buttons">
+            <button class="filter-btn">Vegan</button>
+            <button class="filter-btn">Low FODMAP</button>
+            <button class="filter-btn">Vegetarian</button>
+            <button class="filter-btn">Gluten Free</button>
+            <button class="filter-btn">Lactose Free</button>
+        </div>
+
+        <div class="vertical-recipes">
+
+            <!-- CARD 1 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/stirfry.jpg" alt="Vegetable stir fry">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Gentle Vegetable Stir Fry</h4>
+                        <p>
+                            A warm and colorful stir fry cooked with light seasonings. 
+                            Easy to digest and perfect for evenings when you want something comforting but not heavy.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegan</a>
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Greens</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 2 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/ricesamon.jpg" alt="Salmon bowl">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Soft Rice and Salmon Bowl</h4>
+                        <p>
+                            A gentle bowl with soft rice and tender protein. 
+                            This dish feels calming while providing steady nourishment for the evening.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Protein</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 3 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/Pasta.jpg" alt="Pasta dish">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Light Tomato Pasta</h4>
+                        <p>
+                            A simple pasta dish with gentle tomato flavors.  
+                            Great when you want something cozy that still sits comfortably.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Low Acid</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 4 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/chickensoup.jpg" alt="Chicken soup">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Comfort Chicken Soup</h4>
+                        <p>
+                            A warm, soothing soup that is gentle on digestion.  
+                            Ideal for evenings when you want something soft, warm, and relaxing.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Protein</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 5 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/veggierice.jpg" alt="Veggie rice plate">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Vegetable Rice Plate</h4>
+                        <p>
+                            A simple and calming dish made with steamed rice and seasoned vegetables.  
+                            Mild, filling, and friendly to sensitive stomachs.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegan</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+
+        <!-- ---------------- PAGINATION ---------------- -->
+        <div class="pagination">
+            <a href="#site-footer" class="active-page">1</a>
+            <span>·</span>
+            <a href="#site-footer">2</a>
+            <span>·</span>
+            <a href="#site-footer">3</a>
+            <span>·</span>
+            <a href="#site-footer">4</a>
+            <span>·</span>
+            <a href="#site-footer">...</a>
+        </div>
+
+    </section>
+</main>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="site-footer">
+    <h3>SafeBites</h3>
+    <p>A Recipe Finder for Dietary Needs</p>
+
+    <nav class="footer-menu">
+        <a href="breakfast.html">Breakfast</a> ·
+        <a href="lunch.html">Lunch</a> ·
+        <a href="dinner.html">Dinner</a> ·
+        <a href="dessert.html">Dessert</a> ·
+        <a href="snacks.html">Snacks</a>
+    </nav>
+
+    <p class="copyright">
+        © 2025 — Made to help you eat better, feel better, and enjoy food again.
+    </p>
+</footer>
+
+</body>
+</html>

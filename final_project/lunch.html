@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeBites – Lunch Recipes</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <!------------------ HEADER ------------------>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons/SafeBitesLogo.svg" alt="SafeBites logo">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes, ingredients, diets…">
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="lunch.html" class="active">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="dessert.html">Dessert</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ---------------- HERO ---------------- -->
+    <section class="hero lunch-hero">
+        <div class="hero-text">
+            <h1>Lunch</h1>
+            <p>A balanced, comforting lunch helps you recharge your energy for the rest of the day. 
+            Here you’ll find meals that feel good, taste good, and support your digestion without slowing you down.</p>
+
+            <a href="#recipes" class="cta">Explore lunch options</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/lunch.png" alt="Lunch dishes">
+        </div>
+    </section>
+
+    <!-- ---------------- INTRO ---------------- -->
+    <section class="breakfast-intro">
+        <h2>Lunchtime can set the tone for your whole afternoon</h2>
+
+        <div class="question-grid">
+            <p class="left">
+                A good lunch gives you fuel, focus, and steady energy through the second half of your day. 
+                Choosing foods that are gentle on digestion can help you avoid bloating, heaviness, and fatigue.
+                <br><br>
+                With the right ingredients, lunch becomes a moment of calm and nourishment instead of stress.
+            </p>
+
+            <p class="right">
+                Not every ingredient works the same for every body. That’s why SafeBites helps you find meals 
+                that fit your dietary needs and lifestyle. 
+                <br><br>
+                Enjoy food that supports comfort, clarity, and satisfaction.
+            </p>
+        </div>
+    </section>
+
+    <!-- ---------------- FILTERS + RECIPES ---------------- -->
+    <section id="recipes" class="recent-section">
+        <h2>Latest Lunch Recipes</h2>
+        <p>Filter the recipes by the diet of your preference:</p>
+
+        <div class="diet-filter-buttons">
+            <button class="filter-btn">Vegan</button>
+            <button class="filter-btn">Low FODMAP</button>
+            <button class="filter-btn">Vegetarian</button>
+            <button class="filter-btn">Gluten Free</button>
+            <button class="filter-btn">Lactose Free</button>
+        </div>
+
+        <div class="vertical-recipes">
+
+            <!-- CARD 1 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/quinoa.jpg" alt="Quinoa veggie bowl">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Quinoa Veggie Bowl</h4>
+                        <p>
+                            A colorful, nutrient-rich bowl made with quinoa and fresh vegetables. 
+                            Light on digestion and full of vitamins to keep your energy steady throughout the day.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegan</a>
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 2 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/chicken.jpg" alt="Chicken rice plate">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Herbed Chicken and Rice</h4>
+                        <p>
+                            A simple, comforting plate with lean chicken and fragrant rice. 
+                            Easy to digest and perfect when you want a satisfying but gentle midday meal.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Protein</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 3 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/mediterranian.jpg" alt="Mediterranean salad">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Mediterranean Salad</h4>
+                        <p>
+                            Crisp, refreshing ingredients tossed together for a light and flavorful lunch. 
+                            Great for days when you want something fresh without feeling weighed down.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegetarian</a>
+                            <a href="#">Gluten Free</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 4 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/ricenoodle.jpg" alt="Rice noodle bowl">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Rice Noodle Bowl</h4>
+                        <p>
+                            Light noodles paired with fresh toppings make this bowl easy to enjoy and easy to digest. 
+                            Perfect for quick lunches that feel good and taste even better.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Gluten Free</a>
+                            <a href="#">Low FODMAP</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- CARD 5 -->
+            <a href="#" class="recipe-link">
+                <article class="recipe-row">
+                    <div class="recipe-image">
+                        <img src="images/tofu.jpg" alt="Tofu stir fry">
+                    </div>
+
+                    <div class="recipe-info">
+                        <h4>Tofu Stir Fry</h4>
+                        <p>
+                            A warm and flavorful tofu dish cooked with gentle spices. 
+                            A balanced option when you want something hearty but still easy on your stomach.
+                        </p>
+
+                        <div class="tags">
+                            <a href="#">Vegan</a>
+                            <a href="#">Gluten Free</a>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+
+        <!-- ---------------- PAGINATION ---------------- -->
+        <div class="pagination">
+            <a href="#site-footer" class="active-page">1</a>
+            <span>·</span>
+            <a href="#site-footer">2</a>
+            <span>·</span>
+            <a href="#site-footer">3</a>
+            <span>·</span>
+            <a href="#site-footer">4</a>
+            <span>·</span>
+            <a href="#site-footer">...</a>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="site-footer">
+    <h3>SafeBites</h3>
+    <p>A Recipe Finder for Dietary Needs</p>
+
+    <nav class="footer-menu">
+        <a href="breakfast.html">Breakfast</a> ·
+        <a href="lunch.html">Lunch</a> ·
+        <a href="dinner.html">Dinner</a> ·
+        <a href="dessert.html">Dessert</a> ·
+        <a href="snacks.html">Snacks</a>
+    </nav>
+
+    <p class="copyright">
+        © 2025 — Made to help you eat better, feel better, and enjoy food again.
+    </p>
+</footer>
+
+</body>
+</html>
