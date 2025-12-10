@@ -27,7 +27,7 @@ svg.append("rect")
     .attr("fill", "none")
     .attr("stroke", "black");
 
-let xScale, yScale, data;
+let xScale, data;   // ← yScale removed
 
 // load JSON
 (async function () {
@@ -36,9 +36,9 @@ let xScale, yScale, data;
 
 /* ---------------- BUILD VISUALIZATION ---------------- */
 function buildVisualization(data) {
-    let cleanData = organizeData(data); // make data easier to use
-    buildScales(cleanData); // prepare xScale and yScale to convert values into positions
-    drawVisualization(cleanData); // draw wires, sockets, bulbs, glow, legend, axes
+    let cleanData = organizeData(data);
+    buildScales(cleanData);
+    drawVisualization(cleanData);
     return data;
 }
 
@@ -46,11 +46,11 @@ function buildVisualization(data) {
 function organizeData(data) {
     return data.map(function (d, i) {
         return {
-            index: i,  // day number (0,1,2,3…)
-            date: d.date,  // date text
-            morningMood: d.mood[0],  // first mood number
-            nightMood: d.mood[1],  // second mood number
-            timeWithFriends: d.timeWithFriends   // number for glow
+            index: i,
+            date: d.date,
+            morningMood: d.mood[0],
+            nightMood: d.mood[1],
+            timeWithFriends: d.timeWithFriends
         };
     });
 }
@@ -59,12 +59,10 @@ function organizeData(data) {
 function buildScales(data) {
 
     xScale = d3.scaleLinear()
-        .domain([0, data.length - 1])  // data
-        .range([margin.left, svgWidth - margin.right]);  // position in pixels
+        .domain([0, data.length - 1])
+        .range([margin.left, svgWidth - margin.right]);
 
-    yScale = d3.scaleLinear()
-        .domain([0, 1])
-        .range([margin.top, svgHeight - margin.bottom]);
+    // ❌ yScale removed here completely
 }
 
 /* ---------------- BULB SHAPE + GLOW ---------------- */
@@ -75,7 +73,7 @@ function drawBulb(x, y, size, color, upsideDown, glowSize) {
     }
 
     let g = bulbsLayer.append("g")
-        .attr("class", "bulbGroup"); // a bulb
+        .attr("class", "bulbGroup");
 
     let circleX = x;
     let circleY;
@@ -222,7 +220,6 @@ function drawVisualization(data) {
         .domain([0, d3.max(data, d => d.timeWithFriends)])
         .range([0, 40]);
 
-
     /* ---- WIRES ---- */
     let wireWiggle = 8;
 
@@ -332,7 +329,6 @@ function drawVisualization(data) {
         .attr("font-size", "20px")
         .text("Night");
 
-
     /* ---- X AXIS ---- */
     let xAxis = d3.axisBottom(xScale)
         .ticks(data.length)
@@ -355,7 +351,6 @@ let legendHeight = 220;
 let legendX = svgWidth - legendWidth - 30;
 let legendY = margin.top;
 
-// Background rectangle
 svg.append("rect")
     .attr("x", legendX)
     .attr("y", legendY)
