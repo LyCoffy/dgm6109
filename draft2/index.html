@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Christmas Lights Visualization</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+    <div class="card">
+        <h1 class="title">Christmas Lights</h1>
+
+        <h2>Hypothesis</h2>  
+        <p>
+            How do my emotions shift from morning to night over time?  
+            Is my social life conected to my mood pattern?
+        </p>
+
+        <h2>Elements</h2>  
+        <p>
+            Just like a real string of lights, each bulb represents a day.  
+            The wire is the timeline, and the colors reflect how I felt.  
+            It's a playful and emotional way to show the ups and downs of the month.
+        </p>
+
+        <h2>Pattern</h2>  
+        <p>
+            At a first glance it doesn't look like there's a strong pattern.  
+            But when looking at the days of the week, something interesting appears:  
+            Tuesdays and Wednesdays tend to have the lowest vibes compared to the rest.  
+            It's a detail I didn't expect to notice until I look closely.
+        </p>
+
+        <h2>Why I Chose This?</h2>
+        <p>
+            I wanted to create something fun and festive, inspired by decorative string lights.  
+            It felt fitting for the mood-tracking project and honestly made me happy  
+            when the visualization finally started to look like an actual light installation.
+        </p>
+
+        <h2>Visualization</h2>
+        <p>Morning bulbs = how the day began</p>
+        <p>Night bulbs = how the day ended</p>
+        <p>Colour = mood intensity (1–5)</p>
+
+    </div>
+
+    <div class="card canvas-card">
+        <div id="canvas"></div>
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+</html>
