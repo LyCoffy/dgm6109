@@ -27,7 +27,7 @@ svg.append("rect")
     .attr("fill", "none")
     .attr("stroke", "black");
 
-let xScale, data;   // ← yScale removed
+let xScale, data;
 
 // load JSON
 (async function () {
