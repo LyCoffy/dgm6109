@@ -61,8 +61,6 @@ function buildScales(data) {
     xScale = d3.scaleLinear()
         .domain([0, data.length - 1])
         .range([margin.left, svgWidth - margin.right]);
-
-    // ❌ yScale removed here completely
 }
 
 /* ---------------- BULB SHAPE + GLOW ---------------- */
