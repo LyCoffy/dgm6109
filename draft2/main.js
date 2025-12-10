@@ -36,9 +36,9 @@ let xScale, yScale, data;
 
 /* ---------------- BUILD VISUALIZATION ---------------- */
 function buildVisualization(data) {
-    let cleanData = organizeData(data);
-    buildScales(cleanData);
-    drawVisualization(cleanData);
+    let cleanData = organizeData(data); // make data easier to use
+    buildScales(cleanData); // prepare xScale and yScale to convert values into positions
+    drawVisualization(cleanData); // draw wires, sockets, bulbs, glow, legend, axes
     return data;
 }
 
@@ -46,11 +46,11 @@ function buildVisualization(data) {
 function organizeData(data) {
     return data.map(function (d, i) {
         return {
-            index: i,
-            date: d.date,
-            morningMood: d.mood[0],
-            nightMood: d.mood[1],
-            timeWithFriends: d.timeWithFriends
+            index: i,  // day number (0,1,2,3…)
+            date: d.date,  // date text
+            morningMood: d.mood[0],  // first mood number
+            nightMood: d.mood[1],  // second mood number
+            timeWithFriends: d.timeWithFriends   // number for glow
         };
     });
 }
@@ -59,8 +59,8 @@ function organizeData(data) {
 function buildScales(data) {
 
     xScale = d3.scaleLinear()
-        .domain([0, data.length - 1])
-        .range([margin.left, svgWidth - margin.right]);
+        .domain([0, data.length - 1])  // data
+        .range([margin.left, svgWidth - margin.right]);  // position in pixels
 
     yScale = d3.scaleLinear()
         .domain([0, 1])
@@ -68,7 +68,6 @@ function buildScales(data) {
 }
 
 /* ---------------- BULB SHAPE + GLOW ---------------- */
-
 function drawBulb(x, y, size, color, upsideDown, glowSize) {
 
     if (typeof upsideDown === "undefined") {
@@ -76,12 +75,12 @@ function drawBulb(x, y, size, color, upsideDown, glowSize) {
     }
 
     let g = bulbsLayer.append("g")
-        .attr("class", "bulbGroup");
+        .attr("class", "bulbGroup"); // a bulb
 
     let circleX = x;
     let circleY;
 
-    /* ----------------- RIGHT SIDE UP BULB ------------------ */
+    /* ----------------- RIGHT SIDE UP BULB ----------------- */
     if (!upsideDown) {
 
         circleY = y + 1;
@@ -157,7 +156,7 @@ function drawBulb(x, y, size, color, upsideDown, glowSize) {
     })
     .on("mouseout", function () {
         d3.select(this).select(".glowCircle")
-            .transition().duration(2900)
+            .transition().duration(3000)
             .attr("opacity", 0);
     });
 }
@@ -213,7 +212,6 @@ function drawSocketUpsideDown(x, y) {
         .attr("fill", "#084003ff");
 }
 
-
 /* ---------------- DRAW EVERYTHING ---------------- */
 function drawVisualization(data) {
 
@@ -261,14 +259,12 @@ function drawVisualization(data) {
             .attr("opacity", .8);
     });
 
-
     /* ---- SOCKETS ---- */
     data.forEach(function (d) {
         let x = xScale(d.index);
         drawSocket(x, midY - 5);
         drawSocketUpsideDown(x, midY - 25);
     });
-
 
     /* ---- COLORS ---- */
     let colors = {
@@ -280,7 +276,6 @@ function drawVisualization(data) {
     };
 
     let bulbSize = 22;
-
 
     /* ---- MORNING BULBS ---- */
     data.forEach(function (d) {
@@ -309,7 +304,6 @@ function drawVisualization(data) {
             glowIntensity
         );
     });
-
 
     /* ---- Y AXIS ---- */
     svg.append("line")
@@ -372,7 +366,6 @@ svg.append("rect")
     .attr("stroke-width", 2)
     .attr("rx", 10);
 
-
 /* ---------------- LEGEND TITLES ---------------- */
 svg.append("text")
     .attr("class", "legend-title")
@@ -389,7 +382,6 @@ svg.append("text")
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
     .text("Glowing Size");
-
 
 /* ---------------- MOOD COLOUR CIRCLES ---------------- */
 let moodLabels = [
@@ -415,7 +407,6 @@ moodLabels.forEach(function(d, i) {
         .attr("font-size", "14px")
         .text(d.mood);
 });
-
 
 /* ---------------- GLOW SIZE LEGEND ---------------- */
 svg.append("circle")
