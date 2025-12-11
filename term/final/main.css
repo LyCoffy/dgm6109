@@ -1,0 +1,71 @@
+/* Website background */
+body {
+    background-color: #084003ff; /* your dark green */
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 40px 0;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 1500px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.canvas-card {
+    min-height: 500px;
+}
+
+/* Title styling */
+.title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #084003ff;
+    margin-bottom: 25px;
+}
+
+/* Section headings */
+.card h2 {
+    color: #084003ff;
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+/* Paragraph text */
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Canvas area spacing */
+#canvas {
+    margin-top: 20px;
+    display: block;
+}
+
+.y-axis-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.x-axis-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: .7rem;
+}
+
+.legend-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.legend-label {
+    font-family: "Montserrat", sans-serif;
+    font-size: .8rem;
+}

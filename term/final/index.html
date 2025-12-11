@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Liliana Mata</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+    <div class="card">
+        <h1 class="title">Relation between my emotional state day/night through the passing days</h1>
+    </div>
+
+            <div class="card canvas-card">
+              <div id="canvas"></div>
+            </div>
+
+    <div class="card">
+        <h2>Question</h2>  
+        <p>
+            How do my emotions shift from morning to night over time?  
+            Is my social life conected to my mood pattern?
+        </p>
+
+        <h2>Overview</h2>
+        <p>
+            I collected this data for this project because this was something new I was experiencing. 
+            My daily habits changed when I got some new friends that I've been fond of these last few months, 
+            and I wanted to track the time I spend with them and see how beneficial or perjudicial it was for me 
+            to talk to them this often. I also wanted to see how much time I was now spending on my hobbies, 
+            especially drawing and taking pictures.
+        </p>
+
+        <p>
+            I also found it relevant to track my mood changes at the beginning of the day and at the end. 
+            I chose to recolect my moods manually by writing them down directly into my data or sometimes on a piece of paper. 
+            The rest of the data was taken from other sources: the <code>timeWithFriends</code> value was stored through screen time apps, 
+            and the <code>picturesTaken</code> value was taken directly from my camera roll by checking how many pictures I had actually taken.
+        </p>
+
+        <p>
+            This is an example of the format I started to store my data in. Fortunately, you taught us how to make it readable 
+            for the type of code we were using. Instead of adding extra steps in my code, I tried not to complicate it even more 
+            and also stored my data chronologically so I wouldn’t have to sort it later in JavaScript:
+        </p>
+
+        <pre><code>{
+            date: "2025-10-04",
+            timeWithFriends: 120, // minutes
+            drawingTime: 80, // minutes
+            picturesTaken: 0,
+            emotionalState: { morning: 2, night: 1 }
+        },
+        </code></pre>
+
+        <p>
+            This is how it ended after cleaning the structure for the final visualization:
+        </p>
+
+        <pre><code>{
+            "date": "Dec 10, 2025",
+            "timeWithFriends": 27,
+            "drawingTime": 0,
+            "picturesTaken": 0,
+            "mood": [3, 4]
+        }
+        </code></pre>
+
+        <p>
+            I ended up with 68 days of data. It was enough to start seeing patterns and tendencies. At a simple glance, 
+            you cannot clearly identify them, but with closer inspection I realized my most overwhelming days were 
+            Monday, Tuesday, and Wednesday, most likely the days when I needed to spend more time on homework deliveries. 
+            For this, I had to really pay attention and look back at my calendar, but it was interesting to see that 
+            this is correctly represented in the visualization.
+        </p>
+
+        <p>
+            The colours I chose for these emotions are based on simple associations: green is often perceived as positive 
+            and red as negative, so they sit at opposite ends of the scale. The blue colour, although it doesn’t completely 
+            match the rest of the palette I was going for, felt important to include because blue is often related to relaxation. 
+            And most important of all, I chose these colours because of the Christmas theme of the project and the idea of festive lights.
+        </p>
+
+
+       <h2>Conclusion</h2>
+        <p>
+            The pattern in my visualization was honestly a revelation. I didn’t know something like that was going to appear in my data, 
+            and I wasn’t expecting it to show so clearly, but I’m glad it did. It helped me understand those frustrating days way better 
+            and gave me a new perspective on how my week actually feels in practice.
+        </p>
+
+        <p>
+            My main question was whether my social life affects my mood, and I think it does. For the most part, my most social days 
+            fall on the positive side of my emotions. Even though some social days were still stressful, overall I noticed that having hobbies 
+            and talking to people improved my mood a little bit. It doesn’t magically fix everything, but it does help, and now I can actually 
+            see that in the data.
+        </p>
+
+
+        <h2>Visualization</h2>
+        <p>Morning bulbs = how my emotional state began that day</p>
+        <p>Night bulbs = how my emotional state ended that day</p>
+        <p>Colour = mood intensity (1–5)</p>
+
+    </div>
+
+</body>
+
+<script src="main.js"></script>
+</html>
